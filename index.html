@@ -4,248 +4,153 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agro Forte | Futuro Sustentável</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
-        
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .title-font {
-            font-family: 'Playfair Display', sans-serif;
-        }
-
-        .hero-bg {
-            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random/1920x1080/?sustainable-farm');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .section-title {
-            position: relative;
-        }
-        
-        .section-title:after {
-            content: '';
-            position: absolute;
-            width: 80px;
-            height: 4px;
-            background: #22c55e;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-        }
-    </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body>
 
     <!-- NAVBAR -->
-    <nav class="bg-white shadow-lg fixed w-full z-50">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <i class="fa-solid fa-leaf text-4xl text-green-600"></i>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fa-solid fa-leaf"></i>
                 <div>
-                    <h1 class="title-font text-2xl font-bold text-green-700">Agro Forte</h1>
-                    <p class="text-xs text-green-600 -mt-1">Futuro Sustentável</p>
+                    <h1>Agro Forte</h1>
+                    <p>Futuro Sustentável</p>
                 </div>
             </div>
             
-            <div class="hidden md:flex items-center gap-8">
-                <a href="#inicio" class="hover:text-green-600 font-medium transition">Início</a>
-                <a href="#producao" class="hover:text-green-600 font-medium transition">Produção</a>
-                <a href="#sustentabilidade" class="hover:text-green-600 font-medium transition">Sustentabilidade</a>
-                <a href="#desafios" class="hover:text-green-600 font-medium transition">Desafios</a>
-                <a href="#solucoes" class="hover:text-green-600 font-medium transition">Soluções</a>
-                <a href="#contato" class="hover:text-green-600 font-medium transition">Contato</a>
+            <div class="nav-links">
+                <a href="#inicio">Início</a>
+                <a href="#producao">Produção</a>
+                <a href="#sustentabilidade">Sustentabilidade</a>
+                <a href="#desafios">Desafios</a>
+                <a href="#solucoes">Soluções</a>
+                <a href="#contato">Contato</a>
             </div>
 
-            <button onclick="toggleMobileMenu()" class="md:hidden text-3xl text-green-700">
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
     </nav>
 
     <!-- MOBILE MENU -->
-    <div id="mobileMenu" class="hidden fixed inset-0 bg-white z-50 pt-20">
-        <div class="flex flex-col items-center gap-6 text-xl">
-            <a href="#inicio" onclick="toggleMobileMenu()" class="hover:text-green-600">Início</a>
-            <a href="#producao" onclick="toggleMobileMenu()" class="hover:text-green-600">Produção</a>
-            <a href="#sustentabilidade" onclick="toggleMobileMenu()" class="hover:text-green-600">Sustentabilidade</a>
-            <a href="#desafios" onclick="toggleMobileMenu()" class="hover:text-green-600">Desafios</a>
-            <a href="#solucoes" onclick="toggleMobileMenu()" class="hover:text-green-600">Soluções</a>
-            <a href="#contato" onclick="toggleMobileMenu()" class="hover:text-green-600">Contato</a>
-        </div>
+    <div id="mobileMenu" class="mobile-menu hidden">
+        <a href="#inicio" onclick="toggleMobileMenu()">Início</a>
+        <a href="#producao" onclick="toggleMobileMenu()">Produção</a>
+        <a href="#sustentabilidade" onclick="toggleMobileMenu()">Sustentabilidade</a>
+        <a href="#desafios" onclick="toggleMobileMenu()">Desafios</a>
+        <a href="#solucoes" onclick="toggleMobileMenu()">Soluções</a>
+        <a href="#contato" onclick="toggleMobileMenu()">Contato</a>
     </div>
 
     <!-- HERO -->
-    <section id="inicio" class="hero-bg h-screen flex items-center text-white pt-16">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-6xl md:text-7xl title-font font-bold mb-6">Agro Forte</h2>
-            <p class="text-4xl md:text-5xl title-font font-semibold mb-8">Futuro Sustentável</p>
-            <p class="text-xl md:text-2xl max-w-2xl mx-auto mb-10">O agronegócio brasileiro crescendo com respeito ao meio ambiente.</p>
-            <a href="#producao" 
-               class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold text-xl px-10 py-5 rounded-full transition">
-               Conheça o Projeto
-            </a>
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h2>Agro Forte</h2>
+            <p class="subtitle">Futuro Sustentável</p>
+            <p class="description">Harmonia entre produção e preservação do meio ambiente</p>
+            <a href="#producao" class="cta-button">Conhecer o Projeto</a>
         </div>
     </section>
 
-    <!-- PRODUÇÃO AGRÍCOLA -->
-    <section id="producao" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-4xl title-font font-bold text-center mb-4 section-title">Produção Agrícola</h2>
-            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">O agronegócio é o motor da economia brasileira</p>
+    <!-- PRODUÇÃO -->
+    <section id="producao" class="section">
+        <div class="container">
+            <h2 class="section-title">Produção Agrícola</h2>
+            <p class="section-subtitle">O motor da economia brasileira</p>
             
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-gray-50 p-8 rounded-3xl card-hover text-center">
-                    <i class="fa-solid fa-wheat-awn text-6xl text-green-600 mb-6"></i>
-                    <h3 class="text-5xl font-bold text-green-700">22%</h3>
-                    <p class="text-xl mt-2">do PIB brasileiro</p>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>22%</h3>
+                    <p>do PIB Nacional</p>
                 </div>
-                <div class="bg-gray-50 p-8 rounded-3xl card-hover text-center">
-                    <i class="fa-solid fa-users text-6xl text-green-600 mb-6"></i>
-                    <h3 class="text-5xl font-bold text-green-700">19 milhões</h3>
-                    <p class="text-xl mt-2">de empregos gerados</p>
+                <div class="stat-card">
+                    <h3>19M</h3>
+                    <p>Empregos Gerados</p>
                 </div>
-                <div class="bg-gray-50 p-8 rounded-3xl card-hover text-center">
-                    <i class="fa-solid fa-globe text-6xl text-green-600 mb-6"></i>
-                    <h3 class="text-5xl font-bold text-green-700">1º</h3>
-                    <p class="text-xl mt-2">maior exportador de soja, café e carne</p>
+                <div class="stat-card">
+                    <h3>Líder Mundial</h3>
+                    <p>Exportador de soja, café e carne</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- SUSTENTABILIDADE -->
-    <section id="sustentabilidade" class="py-20 bg-green-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-4xl title-font font-bold text-center mb-12 section-title">Sustentabilidade no Campo</h2>
+    <section id="sustentabilidade" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Práticas Sustentáveis</h2>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white rounded-3xl overflow-hidden card-hover">
-                    <img src="https://source.unsplash.com/random/600x400/?precision-agriculture" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h4 class="font-semibold text-xl mb-3">Agricultura de Precisão</h4>
-                        <p class="text-gray-600">Uso de drones, sensores e IA para otimizar recursos.</p>
-                    </div>
+            <div class="cards-grid">
+                <div class="feature-card">
+                    <img src="https://source.unsplash.com/random/600x400/?drone" alt="Agricultura de Precisão">
+                    <h4>Agricultura de Precisão</h4>
+                    <p>Drones, sensores e IA para maior eficiência.</p>
                 </div>
-                <div class="bg-white rounded-3xl overflow-hidden card-hover">
-                    <img src="https://source.unsplash.com/random/600x400/?solar-farm" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h4 class="font-semibold text-xl mb-3">Energia Renovável</h4>
-                        <p class="text-gray-600">Placas solares e biodigestores nas propriedades.</p>
-                    </div>
+                <div class="feature-card">
+                    <img src="https://source.unsplash.com/random/600x400/?solar" alt="Energia Solar">
+                    <h4>Energia Renovável</h4>
+                    <p>Placas solares e biodigestores nas fazendas.</p>
                 </div>
-                <div class="bg-white rounded-3xl overflow-hidden card-hover">
-                    <img src="https://source.unsplash.com/random/600x400/?smart-irrigation" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h4 class="font-semibold text-xl mb-3">Irrigação Inteligente</h4>
-                        <p class="text-gray-600">Economia de até 40% na utilização de água.</p>
-                    </div>
+                <div class="feature-card">
+                    <img src="https://source.unsplash.com/random/600x400/?irrigation" alt="Irrigação Inteligente">
+                    <h4>Irrigação Inteligente</h4>
+                    <p>Economia de até 40% de água.</p>
                 </div>
-                <div class="bg-white rounded-3xl overflow-hidden card-hover">
-                    <img src="https://source.unsplash.com/random/600x400/?soil-health" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h4 class="font-semibold text-xl mb-3">Conservação do Solo</h4>
-                        <p class="text-gray-600">Plantio direto e rotação de culturas.</p>
-                    </div>
+                <div class="feature-card">
+                    <img src="https://source.unsplash.com/random/600x400/?soil" alt="Solo Saudável">
+                    <h4>Agricultura Regenerativa</h4>
+                    <p>Recuperação e preservação do solo.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- DESAFIOS -->
-    <section id="desafios" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-4xl title-font font-bold text-center mb-12 section-title text-red-700">Desafios Ambientais</h2>
-            
-            <div class="grid md:grid-cols-2 gap-10">
-                <div class="flex gap-6">
-                    <div class="text-7xl text-red-500">🌳</div>
-                    <div>
-                        <h4 class="text-2xl font-semibold mb-3">Desmatamento</h4>
-                        <p class="text-gray-600">Perda de biomas como Amazônia e Cerrado devido à expansão agrícola.</p>
-                    </div>
-                </div>
-                <div class="flex gap-6">
-                    <div class="text-7xl text-red-500">💧</div>
-                    <div>
-                        <h4 class="text-2xl font-semibold mb-3">Uso excessivo de água</h4>
-                        <p class="text-gray-600">Irrigação ineficiente e escassez em regiões críticas.</p>
-                    </div>
-                </div>
-                <div class="flex gap-6">
-                    <div class="text-7xl text-red-500">🏭</div>
-                    <div>
-                        <h4 class="text-2xl font-semibold mb-3">Emissões de Carbono</h4>
-                        <p class="text-gray-600">Contribuição significativa do setor para o aquecimento global.</p>
-                    </div>
-                </div>
-                <div class="flex gap-6">
-                    <div class="text-7xl text-red-500">🧪</div>
-                    <div>
-                        <h4 class="text-2xl font-semibold mb-3">Uso de agrotóxicos</h4>
-                        <p class="text-gray-600">Impacto na biodiversidade e na saúde humana.</p>
-                    </div>
-                </div>
+    <section id="desafios" class="section">
+        <div class="container">
+            <h2 class="section-title red">Desafios Ambientais</h2>
+            <div class="challenges-grid">
+                <div class="challenge-item">🌳 Desmatamento</div>
+                <div class="challenge-item">💧 Escassez de Água</div>
+                <div class="challenge-item">🏭 Emissões de Carbono</div>
+                <div class="challenge-item">🧪 Agrotóxicos em excesso</div>
             </div>
         </div>
     </section>
 
-    <!-- SOLUÇÕES E FUTURO -->
-    <section id="solucoes" class="py-20 bg-green-800 text-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-4xl title-font font-bold text-center mb-12">Soluções e Futuro</h2>
+    <!-- SOLUÇÕES -->
+    <section id="solucoes" class="section solutions-section">
+        <div class="container">
+            <h2 class="section-title white">Soluções e Inovação</h2>
             
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="interactive-grid">
                 <!-- Calculadora -->
-                <div class="bg-white/10 backdrop-blur-lg rounded-3xl p-8">
-                    <h3 class="text-2xl font-semibold mb-6 text-center">Calculadora de Impacto</h3>
-                    <div class="space-y-6">
-                        <div>
-                            <label class="block text-sm mb-2">Área plantada (hectares)</label>
-                            <input id="area" type="number" value="100" 
-                                   class="w-full bg-white/20 rounded-xl px-5 py-3 text-white placeholder-gray-300">
-                        </div>
-                        <button onclick="calcularImpacto()" 
-                                class="w-full bg-green-500 hover:bg-green-600 py-4 rounded-2xl font-semibold transition">
-                            Calcular Impacto
-                        </button>
-                        <div id="resultado" class="mt-6 text-center text-lg font-medium min-h-[80px]"></div>
-                    </div>
+                <div class="interactive-card">
+                    <h3>Calculadora de Impacto</h3>
+                    <input type="number" id="area" value="100" placeholder="Hectares">
+                    <button onclick="calcularImpacto()">Calcular</button>
+                    <div id="resultado"></div>
                 </div>
 
                 <!-- Quiz -->
-                <div class="bg-white/10 backdrop-blur-lg rounded-3xl p-8">
-                    <h3 class="text-2xl font-semibold mb-6 text-center">Quiz da Sustentabilidade</h3>
-                    <div id="quiz" class="space-y-6">
-                        <p id="pergunta" class="font-medium">Qual é a principal vantagem da agricultura de precisão?</p>
-                        <div class="space-y-3" id="opcoes">
-                            <!-- JS preenche -->
-                        </div>
-                    </div>
-                    <div id="quiz-result" class="hidden text-center mt-6"></div>
+                <div class="interactive-card">
+                    <h3>Quiz da Sustentabilidade</h3>
+                    <p id="pergunta">Qual é a principal vantagem da agricultura de precisão?</p>
+                    <div id="opcoes"></div>
+                    <div id="quiz-result"></div>
                 </div>
 
                 <!-- Galeria -->
-                <div class="bg-white/10 backdrop-blur-lg rounded-3xl p-8">
-                    <h3 class="text-2xl font-semibold mb-6 text-center">Galeria</h3>
-                    <div class="grid grid-cols-2 gap-4">
-                        <img src="https://source.unsplash.com/random/300x300/?drone-farm" class="rounded-2xl hover:scale-105 transition">
-                        <img src="https://source.unsplash.com/random/300x300/?solar-agriculture" class="rounded-2xl hover:scale-105 transition">
-                        <img src="https://source.unsplash.com/random/300x300/?regenerative-farm" class="rounded-2xl hover:scale-105 transition">
-                        <img src="https://source.unsplash.com/random/300x300/?healthy-soil" class="rounded-2xl hover:scale-105 transition">
+                <div class="interactive-card gallery-card">
+                    <h3>Galeria</h3>
+                    <div class="gallery">
+                        <img src="https://source.unsplash.com/random/300x300/?farm-drone" alt="">
+                        <img src="https://source.unsplash.com/random/300x300/?solar-farm" alt="">
+                        <img src="https://source.unsplash.com/random/300x300/?regenerative" alt="">
+                        <img src="https://source.unsplash.com/random/300x300/?healthy-soil" alt="">
                     </div>
                 </div>
             </div>
@@ -253,112 +158,26 @@
     </section>
 
     <!-- CONTATO -->
-    <section id="contato" class="py-20 bg-white">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-4xl title-font font-bold text-center mb-12">Entre em Contato</h2>
-            
-            <form onsubmit="enviarMensagem(event)" class="bg-gray-50 p-10 rounded-3xl">
-                <div class="grid md:grid-cols-2 gap-8">
-                    <input type="text" placeholder="Seu nome" required class="w-full px-6 py-4 rounded-2xl border border-gray-200 focus:outline-none focus:border-green-600">
-                    <input type="email" placeholder="Seu e-mail" required class="w-full px-6 py-4 rounded-2xl border border-gray-200 focus:outline-none focus:border-green-600">
-                </div>
-                <textarea placeholder="Sua mensagem" rows="6" required class="mt-8 w-full px-6 py-4 rounded-3xl border border-gray-200 focus:outline-none focus:border-green-600"></textarea>
-                <button type="submit" 
-                        class="mt-8 w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-6 rounded-3xl text-xl transition">
-                    Enviar Mensagem
-                </button>
+    <section id="contato" class="section">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <form onsubmit="enviarMensagem(event)" class="contact-form">
+                <input type="text" placeholder="Seu nome" required>
+                <input type="email" placeholder="Seu e-mail" required>
+                <textarea placeholder="Sua mensagem" rows="6" required></textarea>
+                <button type="submit">Enviar Mensagem</button>
             </form>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-green-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <p class="text-2xl title-font mb-2">Agro Forte • Futuro Sustentável</p>
-            <p class="text-green-300">Desenvolvido como projeto educacional</p>
-            <div class="flex justify-center gap-8 mt-8">
-                <i class="fa-brands fa-instagram text-3xl hover:text-green-400 cursor-pointer"></i>
-                <i class="fa-brands fa-linkedin text-3xl hover:text-green-400 cursor-pointer"></i>
-                <i class="fa-brands fa-youtube text-3xl hover:text-green-400 cursor-pointer"></i>
-            </div>
-            <p class="text-xs text-green-400 mt-10">© 2026 - Todos os direitos reservados</p>
+    <footer>
+        <div class="container">
+            <p class="logo-footer">Agro Forte • Futuro Sustentável</p>
+            <p>Projeto Educacional - Agricultura Sustentável</p>
         </div>
     </footer>
 
-    <script>
-        // Tailwind script already loaded
-
-        function toggleMobileMenu() {
-            document.getElementById('mobileMenu').classList.toggle('hidden');
-        }
-
-        // Calculadora simples
-        function calcularImpacto() {
-            const area = parseFloat(document.getElementById('area').value) || 100;
-            const economia = Math.round(area * 3500); // kg CO2 economizados estimados
-            document.getElementById('resultado').innerHTML = `
-                <p class="text-green-300">Com ${area} hectares sustentáveis:</p>
-                <p class="text-4xl font-bold text-white">-${economia} kg CO₂</p>
-                <p class="text-sm text-green-200">de emissões evitadas por ano</p>
-            `;
-        }
-
-        // Quiz simples
-        let perguntaAtual = 0;
-        const quizData = [
-            {
-                pergunta: "Qual é a principal vantagem da agricultura de precisão?",
-                opcoes: ["Maior uso de água", "Otimização de recursos", "Aumento de desmatamento", "Mais agrotóxicos"],
-                correta: 1
-            }
-        ];
-
-        function carregarQuiz() {
-            const q = quizData[0];
-            document.getElementById('pergunta').textContent = q.pergunta;
-            const opcoesHTML = q.opcoes.map((opcao, i) => `
-                <button onclick="responder(${i})" 
-                        class="w-full text-left px-6 py-4 bg-white/10 hover:bg-white/20 rounded-2xl transition">
-                    ${opcao}
-                </button>
-            `).join('');
-            document.getElementById('opcoes').innerHTML = opcoesHTML;
-        }
-
-        function responder(indice) {
-            const correta = quizData[0].correta;
-            const resultDiv = document.getElementById('quiz-result');
-            
-            if (indice === correta) {
-                resultDiv.innerHTML = `<p class="text-green-400 text-xl font-bold">✅ Resposta correta!</p>`;
-            } else {
-                resultDiv.innerHTML = `<p class="text-red-400 text-xl font-bold">❌ Resposta incorreta.</p>`;
-            }
-            
-            resultDiv.classList.remove('hidden');
-        }
-
-        function enviarMensagem(e) {
-            e.preventDefault();
-            alert("✅ Mensagem enviada com sucesso! Obrigado por apoiar a agricultura sustentável.");
-            e.target.reset();
-        }
-
-        // Inicialização
-        window.onload = function() {
-            carregarQuiz();
-            // Scroll suave para links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    if (this.getAttribute('href') !== '#') {
-                        e.preventDefault();
-                        document.querySelector(this.getAttribute('href')).scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-        };
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
