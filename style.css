@@ -6,11 +6,7 @@
     --dark: #052e16;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     font-family: 'Inter', sans-serif;
@@ -41,13 +37,12 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
-    font-size: 1.8rem;
     color: var(--green);
 }
 
 .logo h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 2rem;
+    font-size: 2.1rem;
 }
 
 .nav-links a {
@@ -55,38 +50,41 @@ body {
     text-decoration: none;
     color: var(--dark);
     font-weight: 500;
-    transition: color 0.3s;
 }
 
-.nav-links a:hover {
-    color: var(--green);
-}
+.nav-links a:hover { color: var(--green); }
 
 /* Hero */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(5, 46, 22, 0.75), rgba(5, 46, 22, 0.85)),
-                url('https://source.unsplash.com/random/1920x1080/?sustainable-agriculture') center/cover no-repeat;
+    background: linear-gradient(rgba(5,46,22,0.65), rgba(5,46,22,0.75)), url('assets/hero.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     color: white;
     text-align: center;
 }
 
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    z-index: 2;
+}
+
 .hero-content h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 5rem;
+    font-size: 5.5rem;
     margin-bottom: 1rem;
 }
 
 .subtitle {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 2.8rem;
     color: var(--green-light);
+    margin-bottom: 1.5rem;
 }
 
 .description {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     max-width: 700px;
     margin: 0 auto 2.5rem;
 }
@@ -99,7 +97,7 @@ body {
     font-weight: 600;
     border-radius: 50px;
     text-decoration: none;
-    transition: all 0.4s;
+    display: inline-block;
 }
 
 .cta-button:hover {
@@ -108,13 +106,8 @@ body {
 }
 
 /* Sections */
-.section {
-    padding: 100px 0;
-}
-
-.bg-light {
-    background: #f8fafc;
-}
+.section { padding: 100px 0; }
+.bg-light { background: #f8fafc; }
 
 .container {
     max-width: 1200px;
@@ -124,19 +117,14 @@ body {
 
 .section-title {
     font-family: 'Playfair Display', serif;
-    font-size: 3rem;
+    font-size: 3.2rem;
     text-align: center;
     margin-bottom: 1rem;
     color: var(--dark);
 }
 
-.section-title.red {
-    color: #b91c1c;
-}
-
-.section-title.white {
-    color: white;
-}
+.section-title.red { color: #b91c1c; }
+.section-title.white { color: white; }
 
 .section-subtitle {
     text-align: center;
@@ -145,121 +133,64 @@ body {
     margin-bottom: 3rem;
 }
 
-/* Stats */
-.stats-grid {
+/* Stats, Cards, etc. */
+.stats-grid, .cards-grid, .interactive-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    margin-top: 3rem;
 }
 
-.stat-card {
+.stat-card, .feature-card, .interactive-card {
     background: white;
-    padding: 2.5rem;
+    padding: 2rem;
     border-radius: 20px;
-    text-align: center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    transition: transform 0.4s;
-}
-
-.stat-card:hover {
-    transform: translateY(-15px);
-}
-
-.stat-card h3 {
-    font-size: 3.5rem;
-    color: var(--green);
-    margin-bottom: 0.5rem;
-}
-
-/* Cards */
-.cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-}
-
-.feature-card {
-    background: white;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     transition: all 0.4s;
-}
-
-.feature-card:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 20px 40px rgba(22, 101, 52, 0.15);
 }
 
 .feature-card img {
     width: 100%;
-    height: 220px;
+    height: 260px;
     object-fit: cover;
+    border-radius: 16px;
 }
 
-.feature-card h4 {
-    padding: 1.5rem 1.5rem 0.5rem;
-    font-size: 1.4rem;
-}
-
-.feature-card p {
-    padding: 0 1.5rem 1.5rem;
-    color: #555;
-}
-
-/* Soluções */
-.solutions-section {
-    background: linear-gradient(135deg, #166534, #052e16);
-    color: white;
-}
-
-.interactive-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    gap: 2rem;
-}
-
-.interactive-card {
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 24px;
-    padding: 2.5rem;
-    border: 1px solid rgba(255,255,255,0.2);
-}
+.feature-card:hover { transform: translateY(-12px); }
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 12px;
 }
 
 .gallery img {
     width: 100%;
+    height: 160px;
+    object-fit: cover;
     border-radius: 16px;
-    transition: transform 0.4s;
+    transition: 0.4s;
 }
 
-.gallery img:hover {
-    transform: scale(1.05);
+.gallery img:hover { transform: scale(1.06); }
+
+/* Soluções Section */
+.solutions-section {
+    background: linear-gradient(135deg, #166534, #052e16);
+    color: white;
 }
 
-/* Formulário */
-.contact-form {
-    max-width: 700px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
+.interactive-card {
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
 }
 
-.contact-form input,
-.contact-form textarea {
+.contact-form input, .contact-form textarea {
     padding: 18px 24px;
     border: none;
     border-radius: 16px;
-    font-size: 1.1rem;
     background: #f1f5f9;
+    font-size: 1.1rem;
 }
 
 .contact-form button {
@@ -269,13 +200,6 @@ body {
     font-size: 1.3rem;
     border: none;
     border-radius: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.contact-form button:hover {
-    background: #14532d;
-    transform: translateY(-3px);
 }
 
 /* Footer */
@@ -287,14 +211,29 @@ footer {
 }
 
 .logo-footer {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-family: 'Playfair Display', serif;
-    margin-bottom: 0.5rem;
 }
 
-/* Responsivo */
+/* Mobile */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    z-index: 2000;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.6rem;
+}
+
 @media (max-width: 768px) {
     .nav-links { display: none; }
-    .hero-content h2 { font-size: 3.5rem; }
-    .subtitle { font-size: 2rem; }
+    .hero-content h2 { font-size: 3.8rem; }
+    .subtitle { font-size: 2.2rem; }
 }
